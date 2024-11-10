@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Container for Resume Content -->
+    <div class="resume-container">
+      <!-- Form Section: Collect resume details -->
+      <section id="form-section">
+        <h2>Fill Out Your Resume</h2>
+
+        <!-- Form for the user to input resume data -->
+        <form id="resume-form">
+          <label for="name-input">Name:</label>
+          <input
+            type="text"
+            id="name-input"
+            placeholder="Enter your name"
+            required
+          /><br /><br />
+
+          <label for="role-input">Role:</label>
+          <input
+            type="text"
+            id="role-input"
+            placeholder="Enter your role"
+            required
+          /><br /><br />
+
+          <label for="email-input">Email:</label>
+          <input
+            type="email"
+            id="email-input"
+            placeholder="Enter your email"
+            required
+          /><br /><br />
+
+          <label for="location-input">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone-input"
+            placeholder="Enter your phone number"
+            required
+          /><br /><br />
+
+          <label for="location-input">Location:</label>
+          <input
+            type="text"
+            id="location-input"
+            placeholder="Enter your location"
+            required
+          /><br /><br />
+
+          <label for="objective-input">Objective:</label><br />
+          <textarea
+            id="objective-input"
+            placeholder="Enter your career objective"
+            required
+          ></textarea
+          ><br /><br />
+
+          <!-- Skills -->
+          <label for="skills-input"
+            >Skills (Like: Figma, Html ..., - separate with commas):</label
+          ><br />
+          <textarea
+            id="skills-input"
+            placeholder="Enter your skills"
+            required
+          ></textarea
+          ><br /><br />
+
+          <!-- Education -->
+          <label for="education-input"
+            >Education (Format: Degree, University, Year):</label
+          ><br />
+          <textarea
+            id="education-input"
+            placeholder="Enter your education details"
+            required
+          ></textarea
+          ><br /><br />
+
+          <!-- Experience -->
+          <label for="experience-input"
+            >Experience (Format: Job Title, Company, Year):</label
+          ><br />
+          <textarea
+            id="experience-input"
+            placeholder="Enter your experience details"
+            required
+          ></textarea
+          ><br /><br />
+
+          <!-- Certifications -->
+          <label for="certifications-input"
+            >Certifications( separate with commas):</label
+          ><br />
+          <textarea
+            id="certifications-input"
+            placeholder="Enter your certifications"
+            required
+          ></textarea
+          ><br /><br />
+
+          <button type="submit" id="submit-btn">Submit</button>
+        </form>
+      </section>
+
+      <!-- Resume Section: Display dynamic resume content -->
+      <section id="resume-section" style="display: none">
+        <header class="header">
+          <div class="name">
+            <h1 id="name"></h1>
+            <p id="role"></p>
+          </div>
+          <div class="contact">
+            <p id="email">Email: | Phone:</p>
+            <p id="location">Location:</p>
+            <!-- <p id="Contact">Phone:</p> -->
+          </div>
+        </header>
+
+        <!-- Objective Section -->
+        <section class="section objective">
+          <h2>Objective</h2>
+          <p id="objective"></p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills">
+          <h2>Skills</h2>
+          <ul class="skills-list" id="skills-list"></ul>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section education">
+          <h2>Education</h2>
+          <ul id="education-list"></ul>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section experience">
+          <h2>Work Experience</h2>
+          <ul id="experience-list"></ul>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section certifications">
+          <h2>Certifications</h2>
+          <ul id="certifications-list"></ul>
+        </section>
+
+        <footer class="footer">
+          <p>Last Updated: <span id="last-updated">November 2024</span></p>
+        </footer>
+
+        <!-- Edit Button -->
+        <button id="edit-btn">Edit</button>
+        <button id="download-pdf-btn">Download PDF</button>
+      </section>
+    </div>
+
+    <script src="dist/app.js"></script>
+  </body>
+</html>
